@@ -72,7 +72,7 @@ def perm_to_permission(perm):
                 "It should be in 'app_label.codename'."
             )
     else:
-        permission = Permission.objects.get(
+        permission = Permission.objects.filter(
                 content_type__app_label=app_label,
                 codename=codename
             )
